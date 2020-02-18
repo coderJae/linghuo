@@ -18,9 +18,13 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
 
+router.beforeEach((to, from, next) => {
+    document.title='枣庄社区疫情地图 关心身边的每一个人';
+    next();
+})
 export default router
