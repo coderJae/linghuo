@@ -9,11 +9,6 @@ const routes = [
     path:'/',
     name:'Home',
     component: Home
-  },
-  {
-    path: '/map',
-    name: 'Map',
-    component: () => import(/* webpackChunkName: "about" */ '../views/map.vue')
   }
 ]
 
@@ -24,7 +19,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    document.title='枣庄社区疫情地图 关心身边的每一个人';
+    document.title='云悠享';
     next();
 })
 export default router
